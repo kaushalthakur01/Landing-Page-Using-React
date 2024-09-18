@@ -1,0 +1,53 @@
+.top-btn {
+    font-size: 2.4rem;
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    background-color: #020122;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* transition: background-color 0.3s, box-shadow 0.3s; */
+
+    /* Hover and active states */
+    &:hover {
+        background-color: #14143c; /* Lighter shade */
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 20px;
+    }
+    
+    &:active {
+        background-color: #010114; /* Slightly darker shade */
+    }
+
+    /* Animation */
+    &--icon {
+        animation: gototop 1.2s linear infinite alternate-reverse;
+    }
+
+    @keyframes gototop {
+        0% {
+            transform: translateY(-0.5rem);
+        }
+        100% {
+            transform: translateY(1rem);
+        }
+    }
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+    .top-btn {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.8rem;
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
